@@ -473,12 +473,15 @@ section {
 }
 
 .pillar-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-6);
 }
 
 .pillar-card {
+  flex: 0 1 calc(33.333% - var(--space-6));
+  min-width: 240px;
   padding: var(--space-8) var(--space-6);
   background: var(--cream);
   border: 1px solid rgba(201, 168, 76, 0.15);
@@ -1070,8 +1073,8 @@ section {
     display: none;
   }
 
-  .pillar-grid {
-    grid-template-columns: 1fr;
+  .pillar-card {
+    flex: 0 1 100%;
   }
 }
 
