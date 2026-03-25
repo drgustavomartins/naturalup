@@ -20,16 +20,35 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Security Meta Tags -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1D3A'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23C9A84C' text-anchor='middle' font-weight='400'%3EN%E2%86%91%3C/text%3E%3C/svg%3E">
+
 <title>Método NaturalUp® — Envelhecimento a favor do tempo</title>
 <meta name="description" content="O Método NaturalUp® é um protocolo de harmonização facial que gerencia o envelhecimento com inteligência, estrutura e ciência. Dr. Gustavo Martins — Rio de Janeiro.">
+<link rel="canonical" href="https://protocolo.amplafacial.com.br">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B1D3A">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Método NaturalUp® — Envelhecimento a favor do tempo">
 <meta property="og:description" content="O protocolo que reconstrói estrutura, estimula biologia e respeita quem você é.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="./assets/hero-portrait.jpg">
+<meta property="og:url" content="https://protocolo.amplafacial.com.br">
+<meta property="og:image" content="https://protocolo.amplafacial.com.br/assets/hero-portrait.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Método NaturalUp®">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Método NaturalUp® — Envelhecimento a favor do tempo">
+<meta name="twitter:description" content="O protocolo que reconstrói estrutura, estimula biologia e respeita quem você é.">
+<meta name="twitter:image" content="https://protocolo.amplafacial.com.br/assets/hero-portrait.jpg">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,10 +114,11 @@
 </header>
 
 
+<main>
 <!-- ===== HERO ===== -->
 <section class="hero" id="inicio">
   <div class="hero-bg">
-    <img src="./assets/hero-portrait.jpg" alt="" loading="eager" width="1920" height="1080">
+    <img src="./assets/hero-portrait.jpg" alt="" role="presentation" loading="eager" width="1920" height="1080">
   </div>
   <div class="hero-overlay"></div>
 
@@ -140,7 +160,7 @@
 <!-- ===== NÚMEROS / STATS ===== -->
 <section class="stats-banner" id="numeros">
   <div class="stats-bg">
-    <img src="./assets/skin-texture.jpg" alt="" loading="lazy" width="1920" height="600" decoding="async">
+    <img src="./assets/skin-texture.jpg" alt="" role="presentation" loading="lazy" width="1920" height="600" decoding="async">
   </div>
   <div class="stats-overlay"></div>
   <div class="container stats-inner fade-in">
@@ -307,7 +327,7 @@
         </div>
         <div class="doctor-languages">
           <svg class="languages-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-          <span>Atendimento em Português, English e Español</span>
+          <span>Atendimento em Português, <span lang="en">English</span> e <span lang="es">Español</span></span>
         </div>
       </div>
     </div>
@@ -324,15 +344,15 @@
     </div>
 
     <div class="testimonials-wrapper fade-in">
-      <div class="testimonial-card active" data-testimonial="0">
+      <div class="testimonial-card active" data-testimonial="0" role="tabpanel" aria-label="Depoimento 1">
         <p class="testimonial-quote">Estou em tratamento com o Dr. Gustavo há aproximadamente quatro anos. As manutenções que faço não são para refazer tudo do zero. São para melhorar ainda mais o resultado dos procedimentos que já venho fazendo ao longo do tempo. Percebo que é realmente um tratamento, ao invés de uma maquiagem, como eram os outros procedimentos que eu fazia antes.</p>
         <span class="testimonial-author">Paciente, 4 anos de acompanhamento</span>
       </div>
-      <div class="testimonial-card" data-testimonial="1">
+      <div class="testimonial-card" data-testimonial="1" role="tabpanel" aria-label="Depoimento 2">
         <p class="testimonial-quote">Já tinha feito harmonização antes e não gostei. Com o Dr. Gustavo foi diferente: ele explicou cada etapa, respeitou meus limites e o resultado ficou exatamente como eu sou. Só melhor.</p>
         <span class="testimonial-author">Paciente, 47 anos, Barra da Tijuca</span>
       </div>
-      <div class="testimonial-card" data-testimonial="2">
+      <div class="testimonial-card" data-testimonial="2" role="tabpanel" aria-label="Depoimento 3">
         <p class="testimonial-quote">O que mais me impressionou foi a honestidade. Ele disse o que não deveria ser feito antes de dizer o que seria feito. Isso me deu uma confiança que nunca tive com outro profissional.</p>
         <span class="testimonial-author">Paciente, 61 anos, Zona Norte</span>
       </div>
@@ -356,19 +376,19 @@
       <p class="section-text" style="text-align: center; margin: 0 auto;">Evoluções clínicas de pacientes em acompanhamento contínuo. Resultados que melhoram com o tempo.</p>
     </div>
 
-    <div class="cases-grid fade-in">
-      <div class="case-item"><img src="./assets/cases/case-01.jpg" alt="Caso clínico antes e depois 1" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-02.jpg" alt="Caso clínico antes e depois 2" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-03.jpg" alt="Caso clínico antes e depois 3" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-04.jpg" alt="Caso clínico antes e depois 4" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-05.jpg" alt="Caso clínico antes e depois 5" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-06.jpg" alt="Caso clínico antes e depois 6" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-07.jpg" alt="Caso clínico antes e depois 7" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-08.jpg" alt="Caso clínico antes e depois 8" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-09.jpg" alt="Caso clínico antes e depois 9" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-10.jpg" alt="Caso clínico antes e depois 10" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-11.jpg" alt="Caso clínico antes e depois 11" loading="lazy" width="400" height="500" decoding="async"></div>
-      <div class="case-item"><img src="./assets/cases/case-12.jpg" alt="Caso clínico antes e depois 12" loading="lazy" width="400" height="500" decoding="async"></div>
+    <div class="cases-grid fade-in" role="list" aria-label="Galeria de casos clínicos antes e depois">
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-01.jpg" alt="Caso clínico antes e depois 1" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-02.jpg" alt="Caso clínico antes e depois 2" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-03.jpg" alt="Caso clínico antes e depois 3" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-04.jpg" alt="Caso clínico antes e depois 4" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-05.jpg" alt="Caso clínico antes e depois 5" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-06.jpg" alt="Caso clínico antes e depois 6" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-07.jpg" alt="Caso clínico antes e depois 7" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-08.jpg" alt="Caso clínico antes e depois 8" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-09.jpg" alt="Caso clínico antes e depois 9" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-10.jpg" alt="Caso clínico antes e depois 10" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-11.jpg" alt="Caso clínico antes e depois 11" loading="lazy" width="400" height="500" decoding="async"></div>
+      <div class="case-item" role="listitem"><img src="./assets/cases/case-12.jpg" alt="Caso clínico antes e depois 12" loading="lazy" width="400" height="500" decoding="async"></div>
     </div>
   </div>
 </section>
@@ -390,6 +410,8 @@
   </div>
 </section>
 
+
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
