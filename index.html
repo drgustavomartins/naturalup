@@ -347,7 +347,7 @@
 </section>
 
 
-<!-- ===== ANTES E DEPOIS ===== -->
+<!-- ===== ANTES E DEPOIS — CARROSSEL ===== -->
 <section class="section-warm" id="resultados">
   <div class="container">
     <div style="text-align: center; margin-bottom: var(--space-12);" class="fade-in">
@@ -355,16 +355,47 @@
       <h2 class="section-title" style="text-align: center;">Casos reais com Método NaturalUp®</h2>
       <p class="section-text" style="text-align: center; margin: 0 auto;">Evoluções clínicas de pacientes em acompanhamento contínuo. Resultados que melhoram com o tempo.</p>
     </div>
+  </div>
 
-    <div class="cases-grid fade-in" role="list" aria-label="Galeria de casos clínicos antes e depois">
-      <div class="case-item case-item--wide" role="listitem"><img src="./assets/cases/case-01.jpg" alt="Caso clínico — evolução facial masculina ao longo de múltiplas sessões" loading="lazy" width="800" height="600" decoding="async"></div>
-      <div class="case-item" role="listitem"><img src="./assets/cases/case-02.jpg" alt="Caso clínico — rejuvenescimento facial feminino, perfil" loading="lazy" width="800" height="800" decoding="async"></div>
-      <div class="case-item" role="listitem"><img src="./assets/cases/case-03.jpg" alt="Caso clínico — harmonização facial masculina jovem" loading="lazy" width="800" height="800" decoding="async"></div>
-      <div class="case-item" role="listitem"><img src="./assets/cases/case-04.jpg" alt="Caso clínico — transformação facial masculina" loading="lazy" width="800" height="800" decoding="async"></div>
-      <div class="case-item" role="listitem"><img src="./assets/cases/case-05.jpg" alt="Caso clínico — rejuvenescimento lateral feminino" loading="lazy" width="800" height="800" decoding="async"></div>
-      <div class="case-item" role="listitem"><img src="./assets/cases/case-06.jpg" alt="Caso clínico — evolução feminina 2023 a 2024" loading="lazy" width="800" height="800" decoding="async"></div>
-      <div class="case-item" role="listitem"><img src="./assets/cases/case-07.jpg" alt="Caso clínico — definição de mandíbula masculina" loading="lazy" width="800" height="800" decoding="async"></div>
+  <div class="cases-carousel-wrapper fade-in" aria-label="Galeria de casos clínicos antes e depois">
+    <div class="cases-carousel-track" id="casesTrack">
+      <!-- Set 1 -->
+      <div class="case-slide"><img src="./assets/cases/case-01.jpg" alt="Caso clínico — evolução facial masculina" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-02.jpg" alt="Caso clínico — rejuvenescimento facial" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-03.jpg" alt="Caso clínico — harmonização facial" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-04.jpg" alt="Caso clínico — transformação facial" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-05.jpg" alt="Caso clínico — rejuvenescimento lateral" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-06.jpg" alt="Caso clínico — evolução 2023 a 2024" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-07.jpg" alt="Caso clínico — definição mandibular" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-08.jpg" alt="Caso clínico — resultado natural" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-09.jpg" alt="Caso clínico — harmonização sutil" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-10.jpg" alt="Caso clínico — rejuvenescimento masculino" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-11.jpg" alt="Caso clínico — evolução contínua" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-12.jpg" alt="Caso clínico — resultado progressivo" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-13.jpg" alt="Caso clínico — antes e depois natural" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-14.jpg" alt="Caso clínico — acompanhamento contínuo" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-15.jpg" alt="Caso clínico — tratamento personalizado" loading="lazy" decoding="async"></div>
+      <!-- Set 2 (duplicate for infinite loop) -->
+      <div class="case-slide"><img src="./assets/cases/case-01.jpg" alt="Caso clínico — evolução facial masculina" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-02.jpg" alt="Caso clínico — rejuvenescimento facial" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-03.jpg" alt="Caso clínico — harmonização facial" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-04.jpg" alt="Caso clínico — transformação facial" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-05.jpg" alt="Caso clínico — rejuvenescimento lateral" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-06.jpg" alt="Caso clínico — evolução 2023 a 2024" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-07.jpg" alt="Caso clínico — definição mandibular" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-08.jpg" alt="Caso clínico — resultado natural" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-09.jpg" alt="Caso clínico — harmonização sutil" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-10.jpg" alt="Caso clínico — rejuvenescimento masculino" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-11.jpg" alt="Caso clínico — evolução contínua" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-12.jpg" alt="Caso clínico — resultado progressivo" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-13.jpg" alt="Caso clínico — antes e depois natural" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-14.jpg" alt="Caso clínico — acompanhamento contínuo" loading="lazy" decoding="async"></div>
+      <div class="case-slide"><img src="./assets/cases/case-15.jpg" alt="Caso clínico — tratamento personalizado" loading="lazy" decoding="async"></div>
     </div>
+  </div>
+
+  <div class="container">
+    <p class="carousel-pause-hint fade-in">Passe o mouse para pausar a rolagem</p>
   </div>
 </section>
 
@@ -484,6 +515,22 @@
     });
   }, { threshold: 0.5 });
   statNumbers.forEach(el => statsObserver.observe(el));
+
+  // Touch swipe support for carousel
+  const track = document.getElementById('casesTrack');
+  if (track) {
+    let touchStartX = 0;
+    let touchDelta = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      track.style.animationPlayState = 'paused';
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      track.style.animationPlayState = 'running';
+    }, { passive: true });
+  }
 </script>
 
 </body>
