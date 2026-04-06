@@ -178,12 +178,9 @@ section {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(
-    135deg,
-    rgba(11, 29, 58, 0.92) 0%,
-    rgba(11, 29, 58, 0.75) 50%,
-    rgba(11, 29, 58, 0.88) 100%
-  );
+  background:
+    radial-gradient(circle, rgba(201, 168, 76, 0.07) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(160deg, rgba(11, 29, 58, 0.94) 0%, rgba(11, 29, 58, 0.78) 50%, rgba(11, 29, 58, 0.92) 100%);
 }
 
 .hero-content {
@@ -232,25 +229,45 @@ section {
 }
 
 .hero-cta {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-4) var(--space-8);
+  padding: var(--space-4) var(--space-10);
   border: 1.5px solid var(--gold);
   color: var(--gold);
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 2px;
-  background: transparent;
+  background: rgba(201, 168, 76, 0.06);
+  transition: background 0.35s, color 0.35s, box-shadow 0.35s;
+}
+
+.hero-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  animation: cta-shimmer 2.8s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+
+@keyframes cta-shimmer {
+  0%   { left: -120%; }
+  100% { left: 200%; }
 }
 
 .hero-cta:hover {
   background: var(--gold);
   color: var(--navy);
+  box-shadow: 0 0 32px rgba(201, 168, 76, 0.45), 0 4px 20px rgba(201, 168, 76, 0.2);
 }
 
 .hero-cta:active {
@@ -1156,3 +1173,191 @@ section {
     height: 280px;
   }
 }
+
+
+/* ===== HERO PROOF STRIP ===== */
+
+.hero-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin: 0 auto var(--space-10);
+  padding: var(--space-3) var(--space-8);
+  border: 1px solid rgba(201, 168, 76, 0.22);
+  border-radius: 100px;
+  background: rgba(201, 168, 76, 0.06);
+  backdrop-filter: blur(6px);
+}
+
+.hero-proof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero-proof-item strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.hero-proof-item span {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.hero-proof-sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(201, 168, 76, 0.22);
+  flex-shrink: 0;
+}
+
+.hero-scroll-hint {
+  margin-top: var(--space-6);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ===== STATS ENHANCEMENTS ===== */
+
+.stat-num-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+}
+
+.stat-suffix {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-number {
+  transition: text-shadow 0.8s ease;
+}
+
+.stat-number.counted {
+  text-shadow: 0 0 30px rgba(201, 168, 76, 0.6), 0 0 60px rgba(201, 168, 76, 0.2);
+}
+
+/* ===== PILLAR CARD HOVER ===== */
+
+.pillar-card {
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), border-color 0.3s, box-shadow 0.3s;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 168, 76, 0.45);
+  box-shadow: 0 16px 48px rgba(201, 168, 76, 0.1), 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.pillar-number {
+  transition: color 0.3s;
+}
+
+.pillar-card:hover .pillar-number {
+  color: var(--gold-light);
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+}
+
+/* ===== AUDIENCE CARD HOVER ===== */
+
+.audience-card-v2 {
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), border-color 0.3s, box-shadow 0.3s;
+}
+
+.audience-card-v2:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.35);
+  box-shadow: 0 12px 36px rgba(201, 168, 76, 0.08);
+}
+
+/* ===== PHILOSOPHY QUOTE MARK ===== */
+
+.philosophy-content {
+  position: relative;
+}
+
+.philosophy-quote {
+  position: relative;
+}
+
+.philosophy-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.3em;
+  left: -0.2em;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 14vw, 12rem);
+  line-height: 1;
+  color: rgba(201, 168, 76, 0.08);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ===== SECTION DIVIDER (minimal, no gap) ===== */
+
+.section-divider {
+  padding: 0;
+  display: none;
+}
+
+/* ===== NAV CTA HOVER GLOW ===== */
+
+.nav-cta {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.nav-cta:hover {
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+}
+
+/* ===== TESTIMONIAL ACTIVE GLOW ===== */
+
+.testimonial-card.active {
+  border-left: 2px solid var(--gold);
+}
+
+/* ===== FADE-IN SMOOTH ===== */
+
+.fade-in {
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== SECTION LABEL GOLD LINE ===== */
+
+.section-label {
+  display: inline-block;
+  position: relative;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  margin-top: 4px;
+  opacity: 0.4;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: label-line 0.6s 0.2s ease forwards;
+}
+
+@keyframes label-line {
+  to { transform: scaleX(1); }
+}
+
