@@ -156,7 +156,7 @@ section {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
   background: var(--navy);
   overflow: hidden;
 }
@@ -175,25 +175,17 @@ section {
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  flex: 1;
   width: 100%;
-  min-height: 100vh;
+  align-self: stretch;
+  min-height: calc(100vh - 60px);
 }
 
 .hero-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 64px;
-  padding-right: 3rem;
-  padding-bottom: 3rem;
-  padding-left: 5vw;
-  overflow: hidden;
-}
-
-/* puxa o bloco de conteúdo para o centro visual (acima do centro geométrico) */
-.hero-copy > * {
-  position: relative;
-  top: -4vh;
+  padding: 2rem 3rem 2.5rem 4rem;
 }
 
 .hero-photo {
@@ -263,7 +255,7 @@ section {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.65;
   max-width: 520px;
-  margin: 0 0 var(--space-7);
+  margin: 0 0 var(--space-8);
   text-align: left;
 }
 
@@ -1262,6 +1254,16 @@ section {
     display: none;
   }
 
+  .hero-proof-bar {
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-6);
+    padding: var(--space-4);
+  }
+
+  .hero-proof-sep {
+    display: none;
+  }
+
   .pillar-grid {
     grid-template-columns: 1fr;
   }
@@ -1299,16 +1301,17 @@ section {
 
 /* ===== HERO PROOF STRIP ===== */
 
-.hero-proof {
-  display: inline-flex;
+/* proof bar — faixa de divisão entre o hero e a próxima seção */
+.hero-proof-bar {
+  display: flex;
   align-items: center;
-  gap: var(--space-5);
-  margin: 0 0 var(--space-7);
-  padding: var(--space-2) var(--space-6);
-  border: 1px solid rgba(201, 168, 76, 0.22);
-  border-radius: 100px;
-  background: rgba(201, 168, 76, 0.06);
-  backdrop-filter: blur(6px);
+  justify-content: center;
+  gap: var(--space-10);
+  padding: var(--space-5) var(--space-8);
+  background: rgba(201, 168, 76, 0.07);
+  border-top: 1px solid rgba(201, 168, 76, 0.18);
+  position: relative;
+  z-index: 3;
 }
 
 .hero-proof-item {
