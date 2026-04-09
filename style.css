@@ -183,8 +183,17 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: calc(var(--space-16) + var(--space-4)) var(--space-10) var(--space-10) clamp(var(--space-6), 6vw, var(--space-16));
+  padding-top: 64px;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 5vw;
   overflow: hidden;
+}
+
+/* puxa o bloco de conteúdo para o centro visual (acima do centro geométrico) */
+.hero-copy > * {
+  position: relative;
+  top: -4vh;
 }
 
 .hero-photo {
